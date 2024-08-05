@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Doctor Appointment Booking</h1>
+        </header>
+
+        <section id="booking-section">
+            <h2>Book an Appointment</h2>
+            <form id="booking-form">
+                <label for="patient-name">Patient Name:</label>
+                <input type="text" id="patient-name" required>
+
+                <label for="doctor-selection">Select Doctor:</label>
+                <select id="doctor-selection" required>
+                    <option value="" disabled selected>Select Doctor</option>
+                </select>
+
+                <label for="appointment-date">Appointment Date:</label>
+                <input type="date" id="appointment-date" required>
+
+                <label for="appointment-time">Appointment Time:</label>
+                <select id="appointment-time" required></select>
+
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+
+        <section id="cancellation-section">
+            <h2>Cancel an Appointment</h2>
+            <label for="appointment-id">Appointment ID:</label>
+            <input type="text" id="appointment-id">
+            <button id="cancel-appointment">Cancel Appointment</button>
+        </section>
+
+        <section id="view-section">
+            <h2>View All Appointments</h2>
+            <button id="view-appointments">View Appointments</button>
+            <div id="appointments-list"></div>
+        </section>
+
+        <section id="doctor-section">
+            <h2>Doctors Information</h2>
+            <div id="doctor-cards"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

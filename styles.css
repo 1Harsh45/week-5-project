@@ -1,0 +1,160 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e0f7fa; /* Light blue background */
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #00796b; /* Darker green */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+section {
+    background-color: #ffffff; /* White background for sections */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #b2dfdb; /* Light green border */
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #00796b; /* Darker green border on focus */
+}
+
+button {
+    background-color: #00796b; /* Darker green button */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d40; /* Darker shade on hover */
+}
+
+/* Appointments list styles */
+#appointments-list {
+    margin-top: 20px;
+}
+
+.appointment-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+    animation-delay: calc(var(--appointment-index) * 0.1s);
+}
+
+.appointment-item strong {
+    color: #333;
+}
+
+.appointment-item p:first-child {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Added spacing for appointment details */
+.appointment-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 20px;
+}
+
+.appointment-details p {
+    margin: 5px 0;
+}
+
+/* Doctor card styles */
+.doctor-card {
+    border: 1px solid #b2dfdb; /* Light green border */
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #e0f7fa; /* Light blue background */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.doctor-card h3 {
+    margin: 0;
+}
+
+.doctor-card p {
+    margin: 5px 0;
+}
+
+.doctor-card:hover {
+    background-color: #b2dfdb; /* Light green on hover */
+    transform: translateY(-3px);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
